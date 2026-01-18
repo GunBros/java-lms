@@ -48,3 +48,11 @@ create table delete_history (
     deleted_by_id bigint,
     primary key (id)
 );
+
+create table image (
+    id bigint not null,
+    name varchar(255),
+    type varchar(255),
+    file_size bigint,
+    type varchar(255)
+);
