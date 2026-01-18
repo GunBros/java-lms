@@ -3,16 +3,18 @@ package nextstep.courses.domain.image;
 import java.util.Objects;
 
 public class CoverImage {
+    private Long id;
     private final String fileName;
     private final ImageDimension imageDimension;
     private final ImageSize imageSize;
     private final ImageType imageType;
 
-    public CoverImage(String fileName, int width, int height, int size) {
-        this(fileName, ImageType.extract(fileName), new ImageDimension(width, height), new ImageSize(size));
+    public CoverImage(Long id, String fileName, int width, int height, int size) {
+        this(id, fileName, ImageType.extract(fileName), new ImageDimension(width, height), new ImageSize(size));
     }
 
-    public CoverImage(String fileName, ImageType imageType, ImageDimension imageDimension, ImageSize imageSize) {
+    public CoverImage(Long id, String fileName, ImageType imageType, ImageDimension imageDimension, ImageSize imageSize) {
+        this.id = id;
         this.fileName = fileName;
         this.imageType = imageType;
         this.imageDimension = imageDimension;

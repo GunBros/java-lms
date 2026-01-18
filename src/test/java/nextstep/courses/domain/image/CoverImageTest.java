@@ -7,6 +7,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class CoverImageTest {
     @Test
     public void create() {
-        assertThat(new CoverImage("file.png", 300, 200, 1024 * 1024)).isEqualTo(new CoverImage("file.png", ImageType.PNG, new ImageDimension(300, 200), new ImageSize(1024 * 1024)));
+        assertThat(new CoverImage(1L, "file.png", 300, 200, 1024 * 1024)).isEqualTo(new CoverImage(1L, "file.png", ImageType.PNG, new ImageDimension(300, 200), new ImageSize(1024 * 1024)));
     }
 }
